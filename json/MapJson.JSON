@@ -1,0 +1,21 @@
+{
+  "Array" : [ "1", "2", "3" ],
+  "String" : "StringVal",
+  "Boolean" : true,
+  "Date" : {
+    "month" : "AUGUST",
+    "year" : 2020,
+    "dayOfMonth" : 21,
+    "hour" : 12,
+    "minute" : 40,
+    "monthValue" : 8,
+    "nano" : 991000000,
+    "second" : 49,
+    "dayOfWeek" : "FRIDAY",
+    "dayOfYear" : 234,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  }
+}
