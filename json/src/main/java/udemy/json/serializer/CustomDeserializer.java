@@ -1,4 +1,4 @@
-package udemy.json.domain;
+package udemy.json.serializer;
 
 import java.io.IOException;
 
@@ -9,10 +9,12 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 
-public class JSONDeserialize extends JsonDeserializer<JsonObject>{
+import udemy.json.domain.SerializedObject;
+
+public class CustomDeserializer extends JsonDeserializer<SerializedObject>{
 
 	@Override
-	public JsonObject deserialize(JsonParser p, DeserializationContext ctxt)
+	public SerializedObject deserialize(JsonParser p, DeserializationContext ctxt)
 			throws IOException, JsonProcessingException {
 		
 		
@@ -20,7 +22,7 @@ public class JSONDeserialize extends JsonDeserializer<JsonObject>{
 		JsonNode root = codec.readTree(p);
 		
 		
-		JsonObject obj = new JsonObject();
+		SerializedObject obj = new SerializedObject();
 		obj.setId(root.get("id").asInt());
 		obj.setKey1(root.get("key 1").asText());
 		obj.setKey2(root.get("key 2").asText());

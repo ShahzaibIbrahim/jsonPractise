@@ -5,21 +5,22 @@ import java.net.URL;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import udemy.json.domain.JsonObject;
-public class JSONTreeModelReadMain {
+import udemy.json.domain.SerializedObject;
+
+public class ReadSerializerMain {
 
 	public static void main(String[] args) throws IOException {
 
 		ObjectMapper obj = new ObjectMapper();
 
-		URL resource = JSONMainRead.class.getClassLoader().getResource("Deserialize.JSON");
+		URL resource = ReadMain.class.getClassLoader().getResource("Deserialize.JSON");
 
 		if (resource == null) {
 			throw new IllegalArgumentException("file not found!");
 		}
 
-		JsonObject jsonObj = obj.readValue(resource, JsonObject.class);
-		
+		SerializedObject jsonObj = obj.readValue(resource, SerializedObject.class);
+
 		System.out.println(jsonObj);
 	}
 }

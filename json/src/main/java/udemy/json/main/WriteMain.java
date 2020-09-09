@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import udemy.json.domain.Student;
 
-public class JsonMain {
+public class WriteMain {
 
 	public static void main(String[] args) {
 		

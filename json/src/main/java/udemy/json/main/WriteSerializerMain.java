@@ -3,12 +3,12 @@ package udemy.json.main;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import udemy.json.domain.JsonObject;
+import udemy.json.domain.SerializedObject;
 
-public class JSONSerializer {
+public class WriteSerializerMain {
 
 	public static void main(String[] args) {
-		JsonObject obj = new JsonObject();
+		SerializedObject obj = new SerializedObject();
 		obj.setId(1);
 		obj.setKey1("123");
 		obj.setKey2("345");

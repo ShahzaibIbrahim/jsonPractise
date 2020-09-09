@@ -2,10 +2,11 @@ package udemy.json.domain;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import udemy.json.serializer.*;
 
-@JsonSerialize(using=UdemyJsonSerializer.class)
-@JsonDeserialize(using=JSONDeserialize.class)
-public class JsonObject {
+@JsonSerialize(using=CustomSerializer.class)
+@JsonDeserialize(using=CustomDeserializer.class)
+public class SerializedObject {
 	
 	private int id;
 	private String key1;
@@ -36,9 +37,6 @@ public class JsonObject {
 	public String toString() {
 		return "JsonObject [id=" + id + ", key1=" + key1 + ", key2=" + key2 + "]";
 	}
-	
-	
-	
 	
 
 }

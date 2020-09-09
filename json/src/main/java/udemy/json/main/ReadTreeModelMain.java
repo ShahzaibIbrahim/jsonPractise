@@ -6,15 +6,12 @@ import java.net.URL;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import udemy.json.domain.Student;
-
-public class JSONDeserializeReadMain {
+public class ReadTreeModelMain {
 
 	public static void main(String[] args) throws IOException {
-
 		ObjectMapper obj = new ObjectMapper();
 
-		URL resource = JSONMainRead.class.getClassLoader().getResource("MapJsonRead.JSON");
+		URL resource = ReadMain.class.getClassLoader().getResource("MapJsonRead.JSON");
 
 		if (resource == null) {
 			throw new IllegalArgumentException("file not found!");
@@ -22,7 +19,8 @@ public class JSONDeserializeReadMain {
 
 		JsonNode node = obj.readTree(resource);
 		
-		
 		System.out.println(node.get("userId").asText());
+		
+		
 	}
 }

@@ -9,13 +9,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 
-public class JSONTreeModelWriteMain {
+public class WriteTreeModelMain {
 
 	public static void main(String[] args) throws JsonProcessingException {
 		
 		ObjectMapper obj = new ObjectMapper();
 
-		URL resource = JSONMainRead.class.getClassLoader().getResource("MapJsonRead.JSON");
+		URL resource = ReadMain.class.getClassLoader().getResource("MapJsonRead.JSON");
 
 		if (resource == null) {
 			throw new IllegalArgumentException("file not found!");
