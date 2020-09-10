@@ -1,0 +1,27 @@
+{
+  "type" : "object",
+  "id" : "urn:jsonschema:udemy:json:domain:SchemaDomain",
+  "$schema" : "http://json-schema.org/draft-03/schema#",
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "required" : true,
+      "description" : "Required"
+    },
+    "name" : {
+      "type" : "string",
+      "required" : true,
+      "description" : "Required"
+    },
+    "grade" : {
+      "type" : "string",
+      "required" : true,
+      "description" : "Required"
+    },
+    "enabled" : {
+      "type" : "boolean",
+      "required" : true,
+      "description" : "Required"
+    }
+  }
+}

@@ -12,6 +12,21 @@
 	    <version>2.11.0</version>
 	</dependency>
 	
-</dependencies>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-jsonSchema -->
+	<dependency>
+	    <groupId>com.fasterxml.jackson.module</groupId>
+	    <artifactId>jackson-module-jsonSchema</artifactId>
+	    <version>2.9.8</version>
+	</dependency>
+	
+		<!-- https://mvnrepository.com/artifact/com.github.fge/json-schema-validator -->
+	<dependency>
+	    <groupId>com.github.fge</groupId>
+	    <artifactId>json-schema-validator</artifactId>
+	    <version>2.2.6</version>
+	</dependency>
+		
+
+  </dependencies>
   
 </project>
